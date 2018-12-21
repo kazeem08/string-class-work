@@ -96,4 +96,19 @@ String.prototype.alternatingCase = function () {
     return result.join('');
 }
 
+String.prototype.numberWords = function () {
+    const numberInWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    let output = [];
+    for (i = 0; i < this.length; i++) {
+        for (j = 0; j < 10; j++) {
+            if (this[i] == j) {
+                //console.log();
+                output.push(numberInWords[j]);
+            }
+        }
+    }
+    return output;
+}
+
+
 module.exports = String;
