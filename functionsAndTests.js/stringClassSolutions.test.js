@@ -14,3 +14,22 @@ describe('test for Vowels', () => {
     });
 
 });
+
+describe('test for toUpper', () => {
+    test('string that is completely lowercase', () => {
+        expect('mercedes'.toUpper()).toBe('MERCEDES')
+    });
+
+    test('string that is completely uppercase', () => {
+        expect('MANGO'.toUpper()).toBe('MANGO')
+    });
+
+    test('string that contain mixture of upper and lower', () => {
+        expect('caPiTulate'.toUpper()).toBe('CAPITULATE')
+    });
+
+    test('string that contain lower at the beginning and upper at the end', () => {
+        expect('casti-GATE'.toUpper()).toBe('CASTI-GATE')
+    });
+
+});
