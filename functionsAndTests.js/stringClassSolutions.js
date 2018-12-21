@@ -82,4 +82,18 @@ String.prototype.inverseCase = function () {
     return result;
 }
 
+String.prototype.alternatingCase = function () {
+    let result = [];
+
+    for (i = 0; i < this.length; i += 2) {
+        character = this.charAt(i);
+        character2 = this.charAt(i + 1)
+
+        result.push(character.toLowerCase());
+        result.push(character2.toUpperCase());
+
+    }
+    return result.join('');
+}
+
 module.exports = String;
