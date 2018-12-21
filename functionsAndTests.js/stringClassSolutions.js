@@ -66,4 +66,20 @@ String.prototype.fromCurrency = function () {
     return Number(this.replace(/,/g, ''));
 }
 
+String.prototype.inverseCase = function () {
+    let character;
+    let result = '';
+    for (let i = 0; i < this.length; i++) {
+        character = this.charAt(i);
+        if (character === character.toUpperCase()) {
+            result += character.toLowerCase();
+
+        } else {
+
+            result += character.toUpperCase();
+        }
+    }
+    return result;
+}
+
 module.exports = String;
