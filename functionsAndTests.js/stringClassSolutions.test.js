@@ -82,3 +82,13 @@ describe('test for words', () => {
         expect('535363 hello'.words()).toEqual(['535363', 'hello'])
     });
 });
+
+describe('test for wordCount', () => {
+    test('string that has hyphen', () => {
+        expect('real-madrid is white'.wordCount()).toBe(3)
+    });
+
+    test('string that has digits and letters', () => {
+        expect('535363 hello'.wordCount()).toBe(2)
+    });
+});
