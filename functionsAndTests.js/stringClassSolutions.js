@@ -37,5 +37,12 @@ String.prototype.toLower = function () {
     return output;
 }
 
+String.prototype.ucFirst = function () {
+    let output = '';
+    for (let i = 0; i < this.length; i++) {
+        (i === 0) ? output += this[i].toUpper() : output += this[i];
+    }
+    return output;
+}
 
 module.exports = String;
