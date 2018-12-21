@@ -62,4 +62,8 @@ String.prototype.wordCount = function () {
     return output.length;
 }
 
+String.prototype.fromCurrency = function () {
+    return Number(this.replace(/,/g, ''));
+}
+
 module.exports = String;
