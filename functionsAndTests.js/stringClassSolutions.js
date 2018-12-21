@@ -50,4 +50,11 @@ String.prototype.isQuestion = function () {
     return (regex.test(this)) ? true : false;
 }
 
+String.prototype.words = function () {
+    let regex = /\w+-*\w*/g;
+    let output = this.match(regex);
+    return output;
+}
+
+
 module.exports = String;
