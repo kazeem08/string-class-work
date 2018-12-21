@@ -45,4 +45,9 @@ String.prototype.ucFirst = function () {
     return output;
 }
 
+String.prototype.isQuestion = function () {
+    let regex = /[?]$/;
+    return (regex.test(this)) ? true : false;
+}
+
 module.exports = String;
