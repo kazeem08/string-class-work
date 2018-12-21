@@ -72,3 +72,13 @@ describe('test for isQuestion', () => {
         expect('sleeping'.isQuestion()).toBeFalsy()
     });
 });
+
+describe('test for words', () => {
+    test('string that has hyphen', () => {
+        expect('real-madrid is white'.words()).not.toBe(['real', 'madrid', 'is', 'white'])
+    });
+
+    test('string that has digits and letters', () => {
+        expect('535363 hello'.words()).toEqual(['535363', 'hello'])
+    });
+});
