@@ -33,3 +33,22 @@ describe('test for toUpper', () => {
     });
 
 });
+
+describe('test for toLower', () => {
+    test('string that is completely uppercase', () => {
+        expect('MERCEDES'.toLower()).toBe('mercedes')
+    });
+
+    test('string that is completely uppercase', () => {
+        expect('MANGO'.toLower()).toBe('mango')
+    });
+
+    test('string that contain mixture of upper and lower', () => {
+        expect('CApiTuLAtE'.toLower()).toBe('capitulate')
+    });
+
+    test('string that contain upper at the beginning and lower at the end', () => {
+        expect('CASTI-gate'.toLower()).toBe('casti-gate')
+    });
+
+});
