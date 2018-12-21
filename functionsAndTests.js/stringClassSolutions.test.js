@@ -103,3 +103,13 @@ describe('test for fromCurrency', () => {
     });
 
 });
+
+describe('test for inverseCase', () => {
+    test('string that has mixture of upper and lower', () => {
+        expect('MaNiPuLaTe'.inverseCase()).toBe('mAnIpUlAtE')
+    });
+
+    test('string that has hyphen', () => {
+        expect('java-SCRIPT'.inverseCase()).toBe('JAVA-script')
+    });
+});
